@@ -6,6 +6,7 @@ function getdata(data) {
 
         setTimeout(() => {
             const text = document.createElement("span");
+            text.className = "bottext"
             text.innerHTML = data;
             message.appendChild(text)
             resolve()
@@ -28,6 +29,7 @@ function handleyeahh(data) {
     document.querySelector(".buttons").style.display = "none";
     const message = document.querySelector(".message");
     const text = document.createElement("div");
+    text.className = "usertext"
     text.innerHTML = data;
     message.appendChild(text);
 }
@@ -37,6 +39,7 @@ function handleno(data) {
     document.querySelector(".buttons").style.display = "none";
     const message = document.querySelector(".message");
     const text = document.createElement("div");
+    text.className = "textdiv"
     text.innerHTML = data;
     message.appendChild(text);
 }
@@ -46,11 +49,8 @@ async function handleYeahResponse() {
     await getdata("That’s great to hear! 😄");
     await getdata("Would you like a high five? ✋");
     await getdata("Just kidding... unless you actually tried. 😅");
-    await getdata("Let me know if you need help with anything.");
-    await getdata("Would you like a high five? ✋");
-    await getdata("Just kidding... unless you actually tried. 😅");
-    await getdata("Let me know if you need help with anything.");
-    // You can continue expanding here
+    handlerbutton()
+
 }
 
 
@@ -60,5 +60,39 @@ async function handlenoResponse() {
     await getdata("Try taking a 5-minute stretch break.");
     await getdata("Would you like me to play relaxing music for you? 🎶");
     await getdata("Or maybe suggest a healthy snack? 🍎");
-    // You can continue expanding here
+    handlerbutton()
+
+}
+
+
+async function handlerbutton() {
+    const container = document.createElement("div");
+    container.className = "button3"
+    message.appendChild(container)
+    handle2response("Hehehe", container)
+    handle2response("Okay Bye!!", container)
+
+}
+
+function handle2response(data, container) {
+    const button = document.createElement("button");
+    button.innerHTML = data;
+    function disapper() {
+        container.remove()
+    }
+    button.addEventListener("click", async () => {
+        disapper()
+        const text = document.createElement("div")
+        text.innerHTML = data;
+        message.appendChild(text)
+        text.className = "usertext"
+        
+        if (data == "Hehehe") {
+            await getdata("hahahaha")
+        } else if (data == "Okay Bye!!") {
+            await getdata("hmm okay Bye!!")
+        }
+    })
+    container.appendChild(button)
+
 }

@@ -21,10 +21,7 @@
         border: 2px solid black;
         height: 670px;
         max-height: 670px;
-        overflow-y: scroll;
         background-color: darkgrey;
-        scrollbar-width: thin;
-        scrollbar-color: rgb(32, 32, 32) rgb(0, 0, 0);
         width: 383px;
         background-image: url(./images/whatsapp2.webp);
 
@@ -33,13 +30,17 @@
 
 
     .message {
+        max-height: 544px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: rgb(32, 32, 32) rgb(0, 0, 0);
+        /* border: 2px solid red; */
         padding-left: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 10px;
-        margin-top: 100px;
-        /* padding-bottom: 100px; */
+        margin-top: 75px;
 
     }
 
@@ -90,7 +91,7 @@
         padding: 0px 20px;
     }
 
-    .message span {
+    .message .bottext {
         padding: 20px;
         border: 2px solid rgb(255, 255, 255);
         color: white;
@@ -102,7 +103,7 @@
 
 
 
-    .message div {
+    .message .usertext {
         position: relative;
         padding: 20px;
         border: 2px solid rgb(255, 255, 255);
@@ -119,6 +120,7 @@
     .buttons {
         display: none;
         /* initially hidden */
+        flex-direction: column;
         justify-content: end;
         margin: 20px;
         gap: 10px;
@@ -132,4 +134,23 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
+    }
+
+    .button3 {
+        gap: 10px;
+        font-family: "Winky Sans", sans-serif;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .button3 button {
+        background-color: #25D366;
+        padding: 10px 20px;
+        border-radius: 10px;
+        color: white;
     }
