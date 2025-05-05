@@ -140,7 +140,6 @@
         gap: 10px;
         font-family: "Winky Sans", sans-serif;
         color: white;
-        border: none;
         border-radius: 5px;
         cursor: pointer;
         display: flex;
@@ -151,6 +150,8 @@
     .button3 button {
         background-color: #25D366;
         padding: 10px 20px;
+        border: none;
         border-radius: 10px;
         color: white;
+        font-family: "Winky Sans", sans-serif;
     }
