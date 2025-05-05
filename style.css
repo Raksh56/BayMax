@@ -1,0 +1,135 @@
+    @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Carter+One&family=Courgette&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Neucha&family=Poetsen+One&family=Special+Gothic+Expanded+One&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .container {
+        display: flex;
+        justify-content: center;
+        height: 644px;
+        align-items: center;
+
+    }
+
+    .box {
+        margin-top: 40px;
+        border-radius: 10px;
+        border: 2px solid black;
+        height: 670px;
+        max-height: 670px;
+        overflow-y: scroll;
+        background-color: darkgrey;
+        scrollbar-width: thin;
+        scrollbar-color: rgb(32, 32, 32) rgb(0, 0, 0);
+        width: 383px;
+        background-image: url(./images/whatsapp2.webp);
+
+    }
+
+
+
+    .message {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 100px;
+        /* padding-bottom: 100px; */
+
+    }
+
+    .replybar {
+        display: flex;
+        justify-content: start;
+        padding-left: 10px;
+        font-family: "Winky Sans", sans-serif;
+        align-items: center;
+        position: fixed;
+        /* top: 200px; */
+        top: 630px;
+        height: 35px;
+        width: 359px;
+        margin-left: 7px;
+        border-radius: 20px;
+        background-color: #4f4b4b;
+        color: white;
+        border: 2px solid white;
+
+
+    }
+
+    .header {
+        display: flex;
+        justify-content: start;
+        position: fixed;
+        padding: 10px 20px;
+        width: 343px;
+        border-radius: 10px;
+        color: white;
+        gap: 20px;
+        align-items: center;
+        background-color: #000000;
+        border-bottom: 2px solid white;
+        font-family: "Winky Sans", sans-serif;
+        z-index: 2;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 80px;
+    }
+
+    .eva {
+        color: white;
+        padding: 0px 20px;
+    }
+
+    .message span {
+        padding: 20px;
+        border: 2px solid rgb(255, 255, 255);
+        color: white;
+        width: fit-content;
+        border-radius: 10px;
+        padding: 15px;
+        font-family: "Winky Sans", sans-serif;
+    }
+
+
+
+    .message div {
+        position: relative;
+        padding: 20px;
+        border: 2px solid rgb(255, 255, 255);
+        color: black;
+        width: fit-content;
+        align-self: end;
+        border-radius: 10px;
+        padding: 15px;
+        font-family: "Winky Sans", sans-serif;
+        background-color: #dcf8c6;
+    }
+
+
+    .buttons {
+        display: none;
+        /* initially hidden */
+        justify-content: end;
+        margin: 20px;
+        gap: 10px;
+    }
+
+    .buttons button {
+        padding: 10px 20px;
+        font-family: "Winky Sans", sans-serif;
+        background-color: #25D366;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
